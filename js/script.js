@@ -179,8 +179,8 @@ $(document).ready(function (){
       $("#image_button_1, #image_button_2, #image_button_3").css("background-color","#ebedf200");
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
 
-      $("#image_button_1, #image_button_2").css("visibility","visible");
-      $("#image_button_1, #image_button_2").css("display","inline-block");
+      $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
+      $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
 
       $("#image_button_1").css("top","29%");//37
       $("#image_button_1").css("left","-12%");//-7
@@ -196,9 +196,13 @@ $(document).ready(function (){
       $("#voice").attr("src","./audio/2a.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
+        $("#image_button_1").css("visibility","visible");
+        $("#image_button_1").css("display","inline-block");
         $("#voice").attr("src","./audio/2b.mp3");
         $("#voice")[0].play();
         $("#voice")[0].onended = function(){
+          $("#image_button_2").css("visibility","visible");
+          $("#image_button_2").css("display","inline-block");
           $("#voice")[0].pause();
           $("#voice").attr("src"," ");
         }
@@ -210,6 +214,9 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+      $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
+      $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
+
       $("#image_button_1").css("top","-3%");//4
       $("#image_button_1").css("left","-11%");//-5
 
@@ -219,9 +226,13 @@ $(document).ready(function (){
       $("#voice").attr("src","./audio/3a.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
+        $("#image_button_1").css("visibility","visible");
+        $("#image_button_1").css("display","inline-block");
         $("#voice").attr("src","./audio/3b.mp3");
         $("#voice")[0].play();
         $("#voice")[0].onended = function(){
+          $("#image_button_2").css("visibility","visible");
+          $("#image_button_2").css("display","inline-block");
           $("#voice")[0].pause();
           $("#voice").attr("src"," ");
         }
@@ -233,6 +244,9 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+      $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
+      $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
+
       $("#image_button_1").css("top","42%");//49
       $("#image_button_1").css("left","-16%");//-10
 
@@ -245,9 +259,13 @@ $(document).ready(function (){
       $("#voice").attr("src","./audio/4a.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
+        $("#image_button_1").css("visibility","visible");
+        $("#image_button_1").css("display","inline-block");
         $("#voice").attr("src","./audio/4b.mp3");
         $("#voice")[0].play();
         $("#voice")[0].onended = function(){
+          $("#image_button_2").css("visibility","visible");
+          $("#image_button_2").css("display","inline-block");
           $("#voice")[0].pause();
           $("#voice").attr("src"," ");
         }
@@ -259,26 +277,33 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+      $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
+      $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
+
       $("#image_button_1").css("top","-14%");//-7
       $("#image_button_1").css("left","-3%");//4
 
       $("#image_button_2").css("top","41%");//47
       $("#image_button_2").css("left","-5%");//2
 
-      $("#image_button_3").css("visibility","visible");
-      $("#image_button_3").css("display","inline-block");
       $("#image_button_3").css("top","47%");//55
       $("#image_button_3").css("left","34%");//40
 
       $("#voice").attr("src","./audio/5a.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
+        $("#image_button_1").css("visibility","visible");
+        $("#image_button_1").css("display","inline-block");
         $("#voice").attr("src","./audio/5b.mp3");
         $("#voice")[0].play();
         $("#voice")[0].onended = function(){
+          $("#image_button_2").css("visibility","visible");
+          $("#image_button_2").css("display","inline-block");
           $("#voice").attr("src","./audio/5c.mp3");
           $("#voice")[0].play();
           $("#voice")[0].onended = function(){
+            $("#image_button_3").css("visibility","visible");
+            $("#image_button_3").css("display","inline-block");
             $("#voice")[0].pause();
             $("#voice").attr("src"," ");
           }
@@ -291,6 +316,9 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+      $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
+      $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
+
       $("#image_button_1").css("top","44%");//51
       $("#image_button_1").css("left","-17%");//-10
 
@@ -303,9 +331,13 @@ $(document).ready(function (){
       $("#voice").attr("src","./audio/6a.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
+        $("#image_button_1").css("visibility","visible");
+        $("#image_button_1").css("display","inline-block");
         $("#voice").attr("src","./audio/6b.mp3");
         $("#voice")[0].play();
         $("#voice")[0].onended = function(){
+          $("#image_button_2").css("visibility","visible");
+          $("#image_button_2").css("display","inline-block");
           $("#voice")[0].pause();
           $("#voice").attr("src"," ");
         }
@@ -317,8 +349,8 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-      $("#image_button_1, #image_button_2").css("visibility","visible");
-      $("#image_button_1, #image_button_2").css("display","inline-block");
+      $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
+      $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
 
       $("#image_button_1").css("top","56%");//63
       $("#image_button_1").css("left","-14%");//-8
@@ -334,9 +366,13 @@ $(document).ready(function (){
       $("#voice").attr("src","./audio/7a.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
+        $("#image_button_1").css("visibility","visible");
+        $("#image_button_1").css("display","inline-block");
         $("#voice").attr("src","./audio/7b.mp3");
         $("#voice")[0].play();
         $("#voice")[0].onended = function(){
+          $("#image_button_2").css("visibility","visible");
+          $("#image_button_2").css("display","inline-block");
           $("#voice")[0].pause();
           $("#voice").attr("src"," ");
         }
@@ -374,13 +410,21 @@ $(document).ready(function (){
     }
 
 
-    /*function record_s_1(){
-      screen = "record_s"
+    function record_s_1(){
+      screen = "record_s";
       $("#image_1").css("width","100%");
       $("#image_1").css("transform","translate(0%, 0%)");
       $("#image_1").attr("src","./img/background_s_1.jpg");
       $("#image_1").fadeIn();  
-    }*/
+
+      $("#text_box").text() = "There was a boy named Ladka who lived in Aina. He had a calf."; 
+      $("#text_box").css("visibility","visible");
+      $("#text_box").css("display","inline-block");
+
+      $("#image_button_1").css("top","56%");
+      $("#image_button_1").css("left","-14%");
+      $("#image_button_1").css("background-image","url(./img/sound_icon_only.png)");
+    }
     
     story_1.splash = splash;
     story_1.home = home;
@@ -395,6 +439,7 @@ $(document).ready(function (){
     story_1.listen_s_8 = listen_s_8;
     story_1.listen_s_9 = listen_s_9;
     story_1.listen_s_10 = listen_s_10;
+    story_1.record_s_1 = record_s_1;
   }
 
   $("#image_button_1").click(function (){
@@ -419,6 +464,8 @@ $(document).ready(function (){
         $("#voice")[0].pause(); $("#voice").attr("src"," ");
       }
     }
+
+    else if ( screen == "record_s" ){ story_1.record_s_1(); }
   });
 
   $("#image_button_2").click(function (){    

@@ -188,8 +188,10 @@ $(document).ready(function (){
       $("#image_button_2").css("top","46%");//53
       $("#image_button_2").css("left","41%");//46
 
-      $("#music").animate( {volume : 0}, 3000);
-      timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); music_on = false; },5000);
+      if( music_on == true ){
+        $("#music").animate( {volume : 0}, 3000);
+        timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); music_on = false; },5000);
+      }
       
       $("#voice").attr("src","./audio/2a.mp3");
       $("#voice")[0].play(); 
@@ -323,6 +325,11 @@ $(document).ready(function (){
 
       $("#image_button_2").css("top","51%");//58
       $("#image_button_2").css("left","33%");//39
+
+      if( music_on == true ){
+        $("#music").animate( {volume : 0}, 3000);
+        timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); music_on = false; },5000);
+      }
 
       $("#voice").attr("src","./audio/7a.mp3");
       $("#voice")[0].play(); 

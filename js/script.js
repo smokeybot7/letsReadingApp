@@ -59,12 +59,15 @@ $(document).ready(function (){
     function login(){
       screen = "login";
       $("#image_1").attr("src","./img/login.png");
-      $("#image_1").fadeIn();
-      $("#image_button_1").css("visibility","visible");
-      $("#image_button_1").css("display","inline-block");
-      $("#image_button_1").fadeIn(); 
-      $("#image_button_1").css("top","44%");//44
-      $("#image_button_1").css("left","44.7%");//45.7
+      $("#image_1").fadeIn(); 
+
+      timeout_1 = setTimeout(function(){ 
+        $("#image_button_1").css("visibility","visible");
+        $("#image_button_1").css("display","inline-block");
+        $("#image_button_1").css("top","44%");//44
+        $("#image_button_1").css("left","44.7%");//45.7
+        $("#image_button_1").fadeIn();  
+      },100);
     }
 
     function home(){ 
@@ -85,26 +88,29 @@ $(document).ready(function (){
     function book_mode(){
       screen = "book_mode";
       $("#image_1").attr("src","./img/home_dark.png");
-      $("#image_2").css("visibility","visible");
-      $("#image_2").css("display","block");
-      $("#image_2").attr("src","./img/mode_menu.png");
-      $("#image_2").fadeIn();
 
-      $("#image_button_1").css("position","fixed");
-      $("#image_button_1").css("top","67%");
-      $("#image_button_1").css("left","26.7%");
-      $("#image_button_1").css("height","7%");
-      $("#image_button_1").css("width","18%");
+      timeout_1 = setTimeout(function(){ 
+        $("#image_2").css("visibility","visible");
+        $("#image_2").css("display","block");
+        $("#image_2").attr("src","./img/mode_menu.png");
+        $("#image_2").fadeIn();
 
-      $("#image_button_2").css("visibility","visible");
-      $("#image_button_2").css("display","inline-block");
-      $("#image_button_2").css("background-color","transparent");
-      $("#image_button_2").css("position","fixed");
-      $("#image_button_2").css("top","67%");
-      $("#image_button_2").css("left","54.3%");
-      $("#image_button_2").css("height","7%");
-      $("#image_button_2").css("width","18%");
-      $("#image_button_2").fadeIn();
+        $("#image_button_1").css("position","fixed");
+        $("#image_button_1").css("top","67%");
+        $("#image_button_1").css("left","26.7%");
+        $("#image_button_1").css("height","7%");
+        $("#image_button_1").css("width","18%");
+
+        $("#image_button_2").css("visibility","visible");
+        $("#image_button_2").css("display","inline-block");
+        $("#image_button_2").css("background-color","transparent");
+        $("#image_button_2").css("position","fixed");
+        $("#image_button_2").css("top","67%");
+        $("#image_button_2").css("left","54.3%");
+        $("#image_button_2").css("height","7%");
+        $("#image_button_2").css("width","18%");
+        $("#image_button_2").fadeIn();
+      },100);
     }
 
     function listen_s_1(){
@@ -412,6 +418,12 @@ $(document).ready(function (){
 
     function record_s_1(){
       screen = "record_s";
+
+      $("#image_2").css("visibility","hidden");
+      $("#image_2").css("display","none");
+      $(".navigation_button").css("display","inline-block");
+      $(".navigation_button").css("visibility","visible");
+
       $("#image_1").css("width","100%");
       $("#image_1").css("transform","translate(0%, 0%)");
       $("#image_1").attr("src","./img/background_s_1.jpg");
@@ -423,7 +435,7 @@ $(document).ready(function (){
 
       $("#image_button_1").css("top","56%");
       $("#image_button_1").css("left","-14%");
-      $("#image_button_1").css("background-image","url(./img/sound_icon_only.png)");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
     
     story_1.splash = splash;
@@ -464,8 +476,6 @@ $(document).ready(function (){
         $("#voice")[0].pause(); $("#voice").attr("src"," ");
       }
     }
-
-    else if ( screen == "record_s" ){ story_1.record_s_1(); }
   });
 
   $("#image_button_2").click(function (){    
@@ -486,6 +496,7 @@ $(document).ready(function (){
         $("#voice")[0].pause(); $("#voice").attr("src"," ");
       }
     }
+    else if ( screen == "book_mode" ){ story_1.record_s_1(); }
   });
 
   $("#image_button_3").click(function (){    
@@ -519,6 +530,9 @@ $(document).ready(function (){
 
     $("#image_1").css("width","100%");
     $("#image_1").css("transform","translate(0%, 0%)");
+
+    $("#text_box").css("visibility","hidden");
+    $("#text_box").css("display","none");
 
     music_on = false;
     $("#voice")[0].pause(); $("#voice").attr("src"," ");

@@ -10,7 +10,7 @@ $(document).ready(function (){
   var page = 0;
   var time = "";
   var timeout_1; var timeout_2; var timeout_3;
-  var detectTap = false;
+  var detectTap = false; var music_on = false;
   var screen = "";
   $("#voice")[0].pause();
   $("#voice").attr("src"," ");
@@ -63,6 +63,8 @@ $(document).ready(function (){
       $("#image_button_1").css("visibility","visible");
       $("#image_button_1").css("display","inline-block");
       $("#image_button_1").fadeIn(); 
+      $("#image_button_1").css("top","44%");//44
+      $("#image_button_1").css("left","44.7%");//45.7
     }
 
     function home(){ 
@@ -121,9 +123,12 @@ $(document).ready(function (){
       $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
       $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
 
-      $("#music").attr("src","./audio/intro_loop.mp3");
-      $("#music")[0].play();
-      $("#music")[0].volume = 0.4;
+      if( music_on == false ){
+        $("#music").attr("src","./audio/intro_loop.mp3");
+        music_on = true;
+        $("#music")[0].play();
+        $("#music")[0].volume = 0.4;
+      }
 
       $("#voice").attr("src","./audio/1a.mp3");
       $("#voice")[0].play();
@@ -149,6 +154,13 @@ $(document).ready(function (){
       $("#image_button_1, #image_button_2, #image_button_3").css("visibility","hidden");
       $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
 
+      if( music_on == false ){
+        $("#music").attr("src","./audio/intro_loop.mp3");
+        music_on = true;
+        $("#music")[0].play();
+        $("#music")[0].volume = 0.4;
+      }
+
       $("#voice").attr("src","./audio/1d.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
@@ -170,14 +182,14 @@ $(document).ready(function (){
       $("#image_button_1, #image_button_2").css("visibility","visible");
       $("#image_button_1, #image_button_2").css("display","inline-block");
 
-      $("#image_button_1").css("top","37%");
-      $("#image_button_1").css("left","-7%");
+      $("#image_button_1").css("top","29%");//37
+      $("#image_button_1").css("left","-12%");//-7
 
-      $("#image_button_2").css("top","53%");
-      $("#image_button_2").css("left","46%");
+      $("#image_button_2").css("top","46%");//53
+      $("#image_button_2").css("left","41%");//46
 
       $("#music").animate( {volume : 0}, 3000);
-      timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); },5000);
+      timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); music_on = false; },5000);
       
       $("#voice").attr("src","./audio/2a.mp3");
       $("#voice")[0].play(); 
@@ -196,11 +208,11 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-      $("#image_button_1").css("top","4%");
-      $("#image_button_1").css("left","-5%");
+      $("#image_button_1").css("top","-3%");//4
+      $("#image_button_1").css("left","-11%");//-5
 
-      $("#image_button_2").css("top","33%");
-      $("#image_button_2").css("left","47%");
+      $("#image_button_2").css("top","25%");//33
+      $("#image_button_2").css("left","41%");//47
 
       $("#voice").attr("src","./audio/3a.mp3");
       $("#voice")[0].play(); 
@@ -219,11 +231,14 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-      $("#image_button_1").css("top","49%");
-      $("#image_button_1").css("left","-10%");
+      $("#image_button_1").css("top","42%");//49
+      $("#image_button_1").css("left","-16%");//-10
 
-      $("#image_button_2").css("top","11%");
-      $("#image_button_2").css("left","35%");
+      $("#image_button_2").css("top","4%");//11
+      $("#image_button_2").css("left","29%");//35
+
+      $("#image_button_3").css("visibility","hidden");
+      $("#image_button_3").css("display","none");
 
       $("#voice").attr("src","./audio/4a.mp3");
       $("#voice")[0].play(); 
@@ -242,16 +257,16 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-      $("#image_button_1").css("top","-7%");
-      $("#image_button_1").css("left","4%");
+      $("#image_button_1").css("top","-14%");//-7
+      $("#image_button_1").css("left","-3%");//4
 
-      $("#image_button_2").css("top","47%");
-      $("#image_button_2").css("left","2%");
+      $("#image_button_2").css("top","41%");//47
+      $("#image_button_2").css("left","-5%");//2
 
       $("#image_button_3").css("visibility","visible");
       $("#image_button_3").css("display","inline-block");
-      $("#image_button_3").css("top","55%");
-      $("#image_button_3").css("left","40%");
+      $("#image_button_3").css("top","47%");//55
+      $("#image_button_3").css("left","34%");//40
 
       $("#voice").attr("src","./audio/5a.mp3");
       $("#voice")[0].play(); 
@@ -274,11 +289,11 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-      $("#image_button_1").css("top","51%");
-      $("#image_button_1").css("left","-10%");
+      $("#image_button_1").css("top","44%");//51
+      $("#image_button_1").css("left","-17%");//-10
 
-      $("#image_button_2").css("top","41%");
-      $("#image_button_2").css("left","43%");
+      $("#image_button_2").css("top","34%");//41
+      $("#image_button_2").css("left","37%");//43
 
       $("#image_button_3").css("visibility","hidden");
       $("#image_button_3").css("display","none");
@@ -303,11 +318,11 @@ $(document).ready(function (){
       $("#image_button_1, #image_button_2").css("visibility","visible");
       $("#image_button_1, #image_button_2").css("display","inline-block");
 
-      $("#image_button_1").css("top","63%");
-      $("#image_button_1").css("left","-8%");
+      $("#image_button_1").css("top","56%");//63
+      $("#image_button_1").css("left","-14%");//-8
 
-      $("#image_button_2").css("top","58%");
-      $("#image_button_2").css("left","39%");
+      $("#image_button_2").css("top","51%");//58
+      $("#image_button_2").css("left","33%");//39
 
       $("#voice").attr("src","./audio/7a.mp3");
       $("#voice")[0].play(); 
@@ -332,6 +347,13 @@ $(document).ready(function (){
 
       $("#voice")[0].pause();
       $("#voice").attr("src"," "); 
+
+      if( music_on == false ){
+        $("#music").attr("src","./audio/intro_loop.mp3");
+        music_on = true;
+        $("#music")[0].play();
+        $("#music")[0].volume = 0.4;
+      }
     }
 
     function listen_s_10(){
@@ -343,6 +365,15 @@ $(document).ready(function (){
       $("#voice")[0].pause();
       $("#voice").attr("src"," "); 
     }
+
+
+    /*function record_s_1(){
+      screen = "record_s"
+      $("#image_1").css("width","100%");
+      $("#image_1").css("transform","translate(0%, 0%)");
+      $("#image_1").attr("src","./img/background_s_1.jpg");
+      $("#image_1").fadeIn();  
+    }*/
     
     story_1.splash = splash;
     story_1.home = home;
@@ -435,6 +466,7 @@ $(document).ready(function (){
     $("#image_1").css("width","100%");
     $("#image_1").css("transform","translate(0%, 0%)");
 
+    music_on = false;
     $("#voice")[0].pause(); $("#voice").attr("src"," ");
     $("#music")[0].pause(); $("#music").attr("src"," ");
     story_1.home(); 

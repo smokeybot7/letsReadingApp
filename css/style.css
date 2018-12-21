@@ -147,13 +147,30 @@ body{
 	padding: 0%;
 	font-size: 24px;
 	text-align: left;
-	color: #888;
+	color: #343434;
 	text-decoration: none;
 	transform: scale(1,1);
 	z-index: 3;	
 	position: absolute;
-	margin-left: 10%;
-	margin-bottom: 10%;
+	top: 78%; /*82*/
+	left: 4%;/*3*/
 }
 
+#answer_box{
+	display: none;
+	visibility: hidden;
+	background-color: transparent;
+	border: none;
+	margin: 0%;
+	padding: 0%;
+	font-size: 24px;
+	text-align: left;
+	color: #00b11f
+	text-decoration: none;
+	transform: scale(1,1);
+	z-index: 3;	
+	position: absolute;
+	top: 87%;/*82*/
+	left: 4%;/*3*/
+}
 

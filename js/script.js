@@ -10,8 +10,8 @@ $(document).ready(function (){
   var page = 0;
   var time = "";
   var timeout_1; var timeout_2; var timeout_3;
-  var detectTap = false; var music_on = false;
-  var screen = "";
+  var detectTap = false; var music_on = false; var recording_on = false;
+  var screen = ""; var recorded_voice = "";
   $("#voice")[0].pause();
   $("#voice").attr("src"," ");
 
@@ -429,12 +429,19 @@ $(document).ready(function (){
       $("#image_1").attr("src","./img/background_s_1.jpg");
       $("#image_1").fadeIn();  
 
-      $("#text_box").text() = "There was a boy named Ladka who lived in Aina. He had a calf."; 
+      $("#text_box").text("There was a boy named Ladka who lived in Aina. He had a calf."); 
       $("#text_box").css("visibility","visible");
       $("#text_box").css("display","inline-block");
 
-      $("#image_button_1").css("top","56%");
-      $("#image_button_1").css("left","-14%");
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("height","91px");
+      $("#image_button_1").css("width","95px");
+      $("#image_button_1").css("transform","scale(0.5,0.5)");
+      /*$("#image_button_1").css("border-radius","60px");
+      $("#image_button_1").css("box-shadow","0px 15px 20px rgba(46, 229, 157, 0.4);")
+      $("#image_button_1").css("background-color","#f3f3f37a");*/
+      $("#image_button_1").css("background-color","transparent");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
     
@@ -454,6 +461,51 @@ $(document).ready(function (){
     story_1.record_s_1 = record_s_1;
   }
 
+  function annyang_record(){
+    if( recording_on == false ){
+        recording_on = true;
+        $("#image_button_1").css("background-image","url(./img/recording_on.png)");
+        $("#answer_box").text(" "); 
+        annyang.start({ autoRestart: false, continuous: true });
+    }
+    else{
+        recording_on = false;
+        $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+        $("#answer_box").text(" "); 
+        $("#answer_box").css("visibility","hidden");
+        $("#answer_box").css("display","none");
+        annyang.abort();
+    }
+
+    if (annyang){
+      var commands = {
+        'show me *tag': function(tag) { alert(tag); },
+        'there *tag': function(tag){
+          recorded_voice = "";
+          recorded_voice = "There " + tag + ".";
+          $("#answer_box").text(recorded_voice); 
+          $("#answer_box").css("visibility","visible");
+          $("#answer_box").css("display","inline-block");
+         }/*,
+        'he *tag': function(tag){ 
+          recorded_voice = recorded_voice + ".He " + tag;
+          $("#answer_box").text(recorded_voice); 
+          $("#answer_box").css("visibility","visible");
+          $("#answer_box").css("display","inline-block");
+        }*/
+      };
+      annyang.addCommands(commands);
+    }
+    else{
+        recording_on = false;
+        $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+        $("#answer_box").text(" "); 
+        $("#answer_box").css("visibility","hidden");
+        $("#answer_box").css("display","none");
+        annyang.abort();
+    }
+  }
+
   $("#image_button_1").click(function (){
     if ( screen == "login" ){ story_1.home(); }
     else if ( screen == "home" ){ story_1.book_mode(); }
@@ -461,13 +513,21 @@ $(document).ready(function (){
     
     else if ( screen == "listen_s" ){ 
       $("#voice")[0].pause(); $("#voice").attr("src"," ");
+      $("#image_button_1, #image_button_2").css("visibility","visible");
+      $("#image_button_1, #image_button_2").css("display","inline-block");
+
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
       $("#image_button_1").css("background-image","url(./img/sound_icon.gif)");
 
       if ( page == 3 ){ $("#voice").attr("src","./audio/2a.mp3"); $("#voice")[0].play(); }
       else if ( page == 4 ){ $("#voice").attr("src","./audio/3a.mp3"); $("#voice")[0].play(); }
       else if ( page == 5 ){ $("#voice").attr("src","./audio/4a.mp3"); $("#voice")[0].play(); }
-      else if ( page == 6 ){ $("#voice").attr("src","./audio/5a.mp3"); $("#voice")[0].play(); }
+      else if ( page == 6 ){ 
+        $("#image_button_3").css("visibility","visible");
+        $("#image_button_3").css("display","inline-block");
+        $("#voice").attr("src","./audio/5a.mp3"); 
+        $("#voice")[0].play(); 
+      }
       else if ( page == 7 ){ $("#voice").attr("src","./audio/6a.mp3"); $("#voice")[0].play(); }
       else if ( page == 8 ){ $("#voice").attr("src","./audio/7a.mp3"); $("#voice")[0].play(); }
 
@@ -476,18 +536,29 @@ $(document).ready(function (){
         $("#voice")[0].pause(); $("#voice").attr("src"," ");
       }
     }
+    else if ( screen == "record_s" ){ 
+      annyang_record();
+    }
   });
 
   $("#image_button_2").click(function (){    
     if ( screen == "listen_s" ){ 
       $("#voice")[0].pause(); $("#voice").attr("src"," ");
+      $("#image_button_1, #image_button_2").css("visibility","visible");
+      $("#image_button_1, #image_button_2").css("display","inline-block");
+
       $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
       $("#image_button_2").css("background-image","url(./img/sound_icon.gif)");
 
       if ( page == 3 ){ $("#voice").attr("src","./audio/2b.mp3"); $("#voice")[0].play(); }
       else if ( page == 4 ){ $("#voice").attr("src","./audio/3b.mp3"); $("#voice")[0].play(); }
       else if ( page == 5 ){ $("#voice").attr("src","./audio/4b.mp3"); $("#voice")[0].play(); }
-      else if ( page == 6 ){ $("#voice").attr("src","./audio/5b.mp3"); $("#voice")[0].play(); }
+      else if ( page == 6 ){ 
+        $("#image_button_3").css("visibility","visible");
+        $("#image_button_3").css("display","inline-block");
+        $("#voice").attr("src","./audio/5b.mp3"); 
+        $("#voice")[0].play(); 
+      }
       else if ( page == 7 ){ $("#voice").attr("src","./audio/6b.mp3"); $("#voice")[0].play(); }
       else if ( page == 8 ){ $("#voice").attr("src","./audio/7b.mp3"); $("#voice")[0].play(); }
 

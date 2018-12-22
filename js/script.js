@@ -12,6 +12,7 @@ $(document).ready(function (){
   var timeout_1; var timeout_2; var timeout_3;
   var detectTap = false; var music_on = false; var recording_on = false;
   var screen = ""; var recorded_voice = "";
+  var text_1 = ""; var text_2 = "";
   $("#voice")[0].pause();
   $("#voice").attr("src"," ");
 
@@ -429,7 +430,8 @@ $(document).ready(function (){
       $("#image_1").attr("src","./img/background_s_1.jpg");
       $("#image_1").fadeIn();  
 
-      $("#text_box").text("There was a boy named Ladka who lived in Aina. He had a calf."); 
+      text_1 = "There was a boy named Ladka who lived in Aina. He had a calf.";
+      $("#text_box").text(text_1); 
       $("#text_box").css("visibility","visible");
       $("#text_box").css("display","inline-block");
 
@@ -481,9 +483,30 @@ $(document).ready(function (){
       var commands = {
         'show me *tag': function(tag) { alert(tag); },
         'there *tag': function(tag){
-          recorded_voice = "";
-          recorded_voice = "There " + tag + ".";
-          $("#answer_box").text(recorded_voice); 
+          recorded_voice = ""; var out_put = "";
+          recorded_voice = "There " + tag;
+          
+          //$("#answer_box").innerHTML = out_put;
+          var text_1_1 = text_1.split(".").join(" ");
+          text_1_1 = text_1_1.split(" ");
+          var text_2 = recorded_voice.split(" ");
+
+          for (var i = 0; i < text_2.length; i++){
+            if( text_2[i] == text_1_1[i] ){ 
+              out_put += text_2[i];
+            }
+            else{ 
+              out_put += "<span style='color:red;font-weight:bold;'>" + text_2[i] + "</span>"; 
+            }
+            if( i != text_2.length-1 ){ out_put += " "; }
+          }
+
+          out_put += ".";
+          alert(out_put);
+          $("#answer_box").html(out_put); 
+          //recorded_voice = "There " + tag + ".";
+          //$("#answer_box").text(out_put);
+          //$("#answer_box").text(recorded_voice); 
           $("#answer_box").css("visibility","visible");
           $("#answer_box").css("display","inline-block");
          }/*,

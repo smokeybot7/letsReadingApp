@@ -203,8 +203,9 @@ $(document).ready(function (){
       $("#image_button_2").css("left","41%");//46
 
       if( music_on == true ){
-        $("#music").animate( {volume : 0}, 3000);
-        timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); music_on = false; },5000);
+        $("#music").animate( {volume : 0}, 1000);
+        music_on = false;
+        //timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); },5000);
       }
       
       $("#voice").attr("src","./audio/2a.mp3");
@@ -373,8 +374,9 @@ $(document).ready(function (){
       $("#image_button_2").css("left","33%");//39
 
       if( music_on == true ){
-        $("#music").animate( {volume : 0}, 3000);
-        timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); music_on = false; },5000);
+        $("#music").animate( {volume : 0}, 1000);
+        music_on = false;
+        //timeout_1 = setTimeout(function(){ $("#music")[0].pause(); $("#music").attr("src"," "); },5000);
       }
 
       $("#voice").attr("src","./audio/7a.mp3");
@@ -418,9 +420,6 @@ $(document).ready(function (){
       $("#image_1").css("transform","translate(49%, 0%)");
       $("#image_1").attr("src","./img/s_10.jpg");
       $("#image_1").fadeIn();   
-
-      $("#voice")[0].pause();
-      $("#voice").attr("src"," "); 
     }
 
 
@@ -428,9 +427,9 @@ $(document).ready(function (){
       screen = "record_s";
       page = 1;
       $(".container-fluid").css("background","#fff");
-
       $("#image_2").css("visibility","hidden");
       $("#image_2").css("display","none");
+
       $(".navigation_button").css("display","block");
       $(".navigation_button").css("visibility","visible");
 
@@ -442,17 +441,14 @@ $(document).ready(function (){
       text_1 = "There was a boy named Ladka who lived in Aina.";
       voice_trigger = "there *tag";
       $("#text_box").text(text_1); 
-      $("#text_box").css("visibility","visible");
-      $("#text_box").css("display","block");
 
-      $("#answer_box").css("visibility","visible");
-      $("#answer_box").css("display","block");
+      $("#content_box, voice_box, text_box, answer_box").css("visibility","visible");
+      $("#content_box, voice_box, text_box, answer_box").css("display","block");
 
       $("#image_button_1, #image_button_2, #image_button_3").css("position","absolute");
       $("#image_button_1").css("display","block");
-
-      $("#image_button_1").css("top","85%");//78
-      $("#image_button_1").css("left","1%");//8
+      $("#image_button_1").css("top","86%");//78
+      $("#image_button_1").css("left","3%");//8
       $("#image_button_1").css("height","91px");
       $("#image_button_1").css("width","95px");
       $("#image_button_1").css("transform","scale(0.5,0.5)");
@@ -470,8 +466,6 @@ $(document).ready(function (){
       text_1 = "He had a calf.";
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_3(){
@@ -481,8 +475,6 @@ $(document).ready(function (){
       text_1 = "Every Morning, they went to the meadow at the edge of the forest.";
       voice_trigger = "every *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_4(){
@@ -492,8 +484,6 @@ $(document).ready(function (){
       text_1 = "The calf would graze all day long; the boy would play.";
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_5(){
@@ -503,8 +493,6 @@ $(document).ready(function (){
       text_1 = "And they would return together in the evening.";
       voice_trigger = "and *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_6(){
@@ -514,8 +502,6 @@ $(document).ready(function (){
       text_1 = "One morning, the calf was grazing and the boy was roaming as usual.";
       voice_trigger = "one *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_7(){
@@ -525,8 +511,6 @@ $(document).ready(function (){
       text_1 = "But the calf ate very little grass that day. ";
       voice_trigger = "but *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_8(){
@@ -536,8 +520,6 @@ $(document).ready(function (){
       text_1 = "Then, she sat down on her belly and fell asleep, slowly chewing cud.";
       voice_trigger = "then *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_9(){
@@ -547,8 +529,6 @@ $(document).ready(function (){
       text_1 = "Ladka ate fruits and plums from the trees.";
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_10(){
@@ -558,8 +538,6 @@ $(document).ready(function (){
       text_1 = "He played on the branches, plucking twigs and flowers.";
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_11(){
@@ -569,8 +547,6 @@ $(document).ready(function (){
       text_1 = "When evening came and the sun was setting, the calf woke up and was hungry again.";
       voice_trigger = "when *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_12(){
@@ -580,8 +556,6 @@ $(document).ready(function (){
       text_1 = "She began to graze and walk about.";
       voice_trigger = "she *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_13(){
@@ -591,8 +565,6 @@ $(document).ready(function (){
       text_1 = "Ladka was tired and ready to go home.";
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_14(){
@@ -602,8 +574,6 @@ $(document).ready(function (){
       text_1 = "He sat waiting for her, and played with little rocks.";
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_15(){
@@ -613,8 +583,6 @@ $(document).ready(function (){
       text_1 = "After some time, he called out to the calf, 'Let’s go home. It’s getting dark. We will be late.'";
       voice_trigger = "after *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_16(){
@@ -624,8 +592,6 @@ $(document).ready(function (){
       text_1 = "The calf was still hungry, and kept grazing.";
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_17(){
@@ -635,8 +601,6 @@ $(document).ready(function (){
       text_1 = "Ladka shouted again, now both tired and afraid.";
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_18(){
@@ -646,8 +610,6 @@ $(document).ready(function (){
       text_1 = "'We should go home now. Come, we will be late. It will soon be night.'";
       voice_trigger = "we *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_19(){
@@ -657,8 +619,6 @@ $(document).ready(function (){
       text_1 = "Calf ignored him and continued grazing.";
       voice_trigger = "calf *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_20(){
@@ -668,8 +628,6 @@ $(document).ready(function (){
       text_1 = "Ladka was confused and began to weep.";
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_21(){
@@ -679,8 +637,6 @@ $(document).ready(function (){
       text_1 = "He feared the darkness in the forest. It was going to be night soon.";
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_22(){
@@ -690,8 +646,6 @@ $(document).ready(function (){
       text_1 = "There were honeybees returning home after a hard day’s work.";
       voice_trigger = "there *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_23(){
@@ -701,8 +655,6 @@ $(document).ready(function (){
       text_1 = "The calf was in their way. They bumped into her, and one of the bees stung her in the ear.";
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_24(){
@@ -712,8 +664,6 @@ $(document).ready(function (){
       text_1 = "The calf began to bleat and moan and jump about in pain.";
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_25(){
@@ -723,8 +673,6 @@ $(document).ready(function (){
       text_1 = "Then she started running towards home.";
       voice_trigger = "then *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_26(){
@@ -734,8 +682,6 @@ $(document).ready(function (){
       text_1 = "Ladka stood up happily and ran after the calf, yelling";
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
 
     function record_s_27(){
@@ -745,10 +691,7 @@ $(document).ready(function (){
       text_1 = "'Hey, wait for me! Wait for me! We are going home!'";
       voice_trigger = "hey *tag";
       $("#text_box").text(text_1); 
-
-      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
     }
-
     
     story_1.splash = splash;
     story_1.home = home;
@@ -967,8 +910,8 @@ $(document).ready(function (){
     $("#image_1").css("width","100%");
     $("#image_1").css("transform","translate(0%, 0%)");
 
-    $("#text_box").css("visibility","hidden");
-    $("#text_box").css("display","none");
+    $("#content_box, voice_box, text_box, answer_box").css("visibility","hidden");
+    $("#content_box, voice_box, text_box, answer_box").css("display","none");
 
     music_on = false;
     $("#voice")[0].pause(); $("#voice").attr("src"," ");

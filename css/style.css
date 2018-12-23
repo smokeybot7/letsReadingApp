@@ -36,7 +36,7 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	outline: none;
-	z-index: 2;
+	z-index: 4;
 }
 
 #previous_button{
@@ -77,7 +77,7 @@ body{
 	outline: none;
 	background-repeat: no-repeat;
 	transform: scale(1,1);
-	z-index: 3;	
+	z-index: 5;	
 }
 
 #image_button_1:hover, #image_button_2:hover, #image_button_3:hover{
@@ -145,19 +145,19 @@ body{
 #text_box{
 	display: none;
 	visibility: hidden;
-	background-color: transparent;
+	background-color: #ffffffe0;
 	border: none;
 	margin: 0%;
 	padding: 0%;
 	font-size: 24px;
 	text-align: left;
-	color: #343434;
+	color: #0a0a0ae0;
 	text-decoration: none;
 	transform: scale(1,1);
-	z-index: 3;	
+	z-index: 4;	
 	position: absolute;
 	top: 77%; /*82*/
-	left: 4%;/*3*/
+	left: 4.5%;/*3*/
 	width: 91%;
 }
 
@@ -173,10 +173,47 @@ body{
 	color: #00b11f;
 	text-decoration: none;
 	transform: scale(1,1);
+	z-index: 4;	
+	position: absolute;
+	top: 87%;/*82*/
+	left: 11%;/*3*/
+	width: 84.4%;
+}
+
+#content_box{
+	display: none;
+	visibility: hidden;
+	background-color: #9b9b9b59;
+	border: none;
+	margin: 0%;
+	padding: 0%;
+	font-size: 24px;
+	text-align: left;
+	color: #00b11f;
+	text-decoration: none;
+	transform: scale(1,1);
+	z-index: 2;	
+	position: absolute;
+	top: 74%;/*82*/
+	left: 2%;/*3*/
+	height: 24%; width: 96%;	
+}
+
+#voice_box{
+	display: none;
+	visibility: hidden;
+	background-color: #ffffffd1;
+	border: none;
+	margin: 0%;
+	padding: 0%;
+	font-size: 24px;
+	text-align: left;
+	color: #00b11f;
+	text-decoration: none;
+	transform: scale(1,1);
 	z-index: 3;	
 	position: absolute;
 	top: 87%;/*82*/
-	left: 9%;/*3*/
-	width: 86%;
+	left: 4.5%;/*3*/
+	height: 9%; width: 91%;	
 }
-

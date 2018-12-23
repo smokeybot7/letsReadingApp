@@ -73,6 +73,8 @@ $(document).ready(function (){
 
     function home(){ 
       screen = "home";
+      $(".container-fluid").css("background","#000");
+
       $("#image_1").attr("src","./img/home.png");
       $("#image_1").fadeIn();
       $("#image_button_1").css("background-color","transparent");
@@ -117,6 +119,7 @@ $(document).ready(function (){
     function listen_s_1(){
       screen = "listen_s";
       page = 1;
+
       $("#image_2").css("visibility","hidden");
       $("#image_2").css("display","none");
       $(".navigation_button").css("display","inline-block");
@@ -146,7 +149,9 @@ $(document).ready(function (){
           $("#voice").attr("src","./audio/1c.mp3");
           $("#voice")[0].play();
           $("#voice")[0].onended = function(){
-            timeout_1 = setTimeout(function(){ page++; listen_s_2(); },2000);
+            $("#voice")[0].pause(); 
+            $("#voice").attr("src"," ");
+            //timeout_1 = setTimeout(function(){ page++; listen_s_2(); },2000);
           }
         }
       }
@@ -171,7 +176,9 @@ $(document).ready(function (){
       $("#voice").attr("src","./audio/1d.mp3");
       $("#voice")[0].play(); 
       $("#voice")[0].onended = function(){
-        timeout_1 = setTimeout(function(){ page++; listen_s_3(); },2000);
+        $("#voice")[0].pause(); 
+        $("#voice").attr("src"," ");
+        //timeout_1 = setTimeout(function(){ page++; listen_s_3(); },2000);
       } 
     }
 
@@ -420,10 +427,11 @@ $(document).ready(function (){
     function record_s_1(){
       screen = "record_s";
       page = 1;
+      $(".container-fluid").css("background","#fff");
 
       $("#image_2").css("visibility","hidden");
       $("#image_2").css("display","none");
-      $(".navigation_button").css("display","inline-block");
+      $(".navigation_button").css("display","block");
       $(".navigation_button").css("visibility","visible");
 
       $("#image_1").css("width","100%");
@@ -435,10 +443,14 @@ $(document).ready(function (){
       voice_trigger = "there *tag";
       $("#text_box").text(text_1); 
       $("#text_box").css("visibility","visible");
-      $("#text_box").css("display","inline-block");
+      $("#text_box").css("display","block");
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
+      $("#answer_box").css("visibility","visible");
+      $("#answer_box").css("display","block");
+      $("#image_button_1").css("display","block");
+
+      $("#image_button_1").css("top","85%");//78
+      $("#image_button_1").css("left","1%");//8
       $("#image_button_1").css("height","91px");
       $("#image_button_1").css("width","95px");
       $("#image_button_1").css("transform","scale(0.5,0.5)");
@@ -447,7 +459,6 @@ $(document).ready(function (){
       $("#image_button_1").css("background-color","#f3f3f37a");*/
       $("#image_button_1").css("background-color","transparent");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_2(){
@@ -458,10 +469,7 @@ $(document).ready(function (){
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_3(){
@@ -472,10 +480,7 @@ $(document).ready(function (){
       voice_trigger = "every *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_4(){
@@ -486,10 +491,7 @@ $(document).ready(function (){
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_5(){
@@ -500,10 +502,7 @@ $(document).ready(function (){
       voice_trigger = "and *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_6(){
@@ -514,10 +513,7 @@ $(document).ready(function (){
       voice_trigger = "one *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_7(){
@@ -528,10 +524,7 @@ $(document).ready(function (){
       voice_trigger = "but *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_8(){
@@ -542,10 +535,7 @@ $(document).ready(function (){
       voice_trigger = "then *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_9(){
@@ -556,10 +546,7 @@ $(document).ready(function (){
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_10(){
@@ -570,10 +557,7 @@ $(document).ready(function (){
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_11(){
@@ -584,10 +568,7 @@ $(document).ready(function (){
       voice_trigger = "when *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_12(){
@@ -598,10 +579,7 @@ $(document).ready(function (){
       voice_trigger = "she *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_13(){
@@ -612,10 +590,7 @@ $(document).ready(function (){
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_14(){
@@ -626,10 +601,7 @@ $(document).ready(function (){
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_15(){
@@ -640,10 +612,7 @@ $(document).ready(function (){
       voice_trigger = "after *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_16(){
@@ -654,10 +623,7 @@ $(document).ready(function (){
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_17(){
@@ -668,10 +634,7 @@ $(document).ready(function (){
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_18(){
@@ -682,10 +645,7 @@ $(document).ready(function (){
       voice_trigger = "we *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_19(){
@@ -696,10 +656,7 @@ $(document).ready(function (){
       voice_trigger = "calf *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_20(){
@@ -710,10 +667,7 @@ $(document).ready(function (){
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_21(){
@@ -724,10 +678,7 @@ $(document).ready(function (){
       voice_trigger = "he *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_22(){
@@ -738,10 +689,7 @@ $(document).ready(function (){
       voice_trigger = "there *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_23(){
@@ -752,10 +700,7 @@ $(document).ready(function (){
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_24(){
@@ -766,10 +711,7 @@ $(document).ready(function (){
       voice_trigger = "the *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_25(){
@@ -780,10 +722,7 @@ $(document).ready(function (){
       voice_trigger = "then *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_26(){
@@ -794,10 +733,7 @@ $(document).ready(function (){
       voice_trigger = "ladka *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     function record_s_27(){
@@ -808,10 +744,7 @@ $(document).ready(function (){
       voice_trigger = "hey *tag";
       $("#text_box").text(text_1); 
 
-      $("#image_button_1").css("top","74%");//78
-      $("#image_button_1").css("left","68%");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
-      annyang.abort();
     }
 
     
@@ -851,9 +784,9 @@ $(document).ready(function (){
 
     if (annyang){
       var commands = {
-        'show me *tag': function(tag) { alert(tag); },
+        //'show me *tag': function(tag) { alert(tag); },
         //'there *tag': function(tag){
-        voice_trigger : function(tag){
+        '*tag' : function(tag){ alert(tag);
           var out_put = ""; recorded_voice = ""; var correct = true;
 
           //$("#answer_box").innerHTML = out_put;
@@ -881,7 +814,7 @@ $(document).ready(function (){
           //$("#answer_box").text(out_put);
           //$("#answer_box").text(recorded_voice); 
           $("#answer_box").css("visibility","visible");
-          $("#answer_box").css("display","inline-block");
+          $("#answer_box").css("display","block");
 
           /*if( correct == true){
             $("#image_button_3").css("visibility","hidden");
@@ -1048,32 +981,32 @@ $(document).ready(function (){
       else if ( page == 9 ){ page++; story_1.listen_s_10(); }
     }
     else if ( screen == "record_s" ){
-      if( page == 1 ){ page++; story_1.listen_r_2(); }
-      else if ( page == 2 ){ page++; story_1.listen_r_3(); }
-      else if ( page == 3 ){ page++; story_1.listen_r_4(); }
-      else if ( page == 4 ){ page++; story_1.listen_r_5(); }
-      else if ( page == 5 ){ page++; story_1.listen_r_6(); }
-      else if ( page == 6 ){ page++; story_1.listen_r_7(); }
-      else if ( page == 7 ){ page++; story_1.listen_r_8(); }
-      else if ( page == 8 ){ page++; story_1.listen_r_9(); }
-      else if ( page == 9 ){ page++; story_1.listen_r_10(); }
-      else if ( page == 10 ){ page++; story_1.listen_r_11(); }
-      else if ( page == 11 ){ page++; story_1.listen_r_12(); }
-      else if ( page == 12 ){ page++; story_1.listen_r_13(); }
-      else if ( page == 13 ){ page++; story_1.listen_r_14(); }
-      else if ( page == 14 ){ page++; story_1.listen_r_15(); }
-      else if ( page == 15 ){ page++; story_1.listen_r_16(); }
-      else if ( page == 16 ){ page++; story_1.listen_r_17(); }
-      else if ( page == 17 ){ page++; story_1.listen_r_18(); }
-      else if ( page == 18 ){ page++; story_1.listen_r_19(); }
-      else if ( page == 19 ){ page++; story_1.listen_r_20(); }
-      else if ( page == 20 ){ page++; story_1.listen_r_21(); }
-      else if ( page == 21 ){ page++; story_1.listen_r_22(); }
-      else if ( page == 22 ){ page++; story_1.listen_r_23(); }
-      else if ( page == 23 ){ page++; story_1.listen_r_24(); }
-      else if ( page == 24 ){ page++; story_1.listen_r_25(); }
-      else if ( page == 25 ){ page++; story_1.listen_r_26(); }
-      else if ( page == 26 ){ page++; story_1.listen_r_27(); }
+      if( page == 1 ){ page++; story_1.record_s_2(); }
+      else if ( page == 2 ){ page++; story_1.record_s_3(); }
+      else if ( page == 3 ){ page++; story_1.record_s_4(); }
+      else if ( page == 4 ){ page++; story_1.record_s_5(); }
+      else if ( page == 5 ){ page++; story_1.record_s_6(); }
+      else if ( page == 6 ){ page++; story_1.record_s_7(); }
+      else if ( page == 7 ){ page++; story_1.record_s_8(); }
+      else if ( page == 8 ){ page++; story_1.record_s_9(); }
+      else if ( page == 9 ){ page++; story_1.record_s_10(); }
+      else if ( page == 10 ){ page++; story_1.record_s_11(); }
+      else if ( page == 11 ){ page++; story_1.record_s_12(); }
+      else if ( page == 12 ){ page++; story_1.record_s_13(); }
+      else if ( page == 13 ){ page++; story_1.record_s_14(); }
+      else if ( page == 14 ){ page++; story_1.record_s_15(); }
+      else if ( page == 15 ){ page++; story_1.record_s_16(); }
+      else if ( page == 16 ){ page++; story_1.record_s_17(); }
+      else if ( page == 17 ){ page++; story_1.record_s_18(); }
+      else if ( page == 18 ){ page++; story_1.record_s_19(); }
+      else if ( page == 19 ){ page++; story_1.record_s_20(); }
+      else if ( page == 20 ){ page++; story_1.record_s_21(); }
+      else if ( page == 21 ){ page++; story_1.record_s_22(); }
+      else if ( page == 22 ){ page++; story_1.record_s_23(); }
+      else if ( page == 23 ){ page++; story_1.record_s_24(); }
+      else if ( page == 24 ){ page++; story_1.record_s_25(); }
+      else if ( page == 25 ){ page++; story_1.record_s_26(); }
+      else if ( page == 26 ){ page++; story_1.record_s_27(); }
     }
   });
 
@@ -1090,32 +1023,32 @@ $(document).ready(function (){
       else if ( page == 10 ){ page--; story_1.listen_s_9(); }
     }
     else if ( screen == "record_s" ){
-      if ( page == 2 ){ page--; story_1.listen_r_1(); }
-      else if ( page == 3 ){ page--; story_1.listen_r_2(); }
-      else if ( page == 4 ){ page--; story_1.listen_r_3(); }
-      else if ( page == 5 ){ page--; story_1.listen_r_4(); }
-      else if ( page == 6 ){ page--; story_1.listen_r_5(); }
-      else if ( page == 7 ){ page--; story_1.listen_r_6(); }
-      else if ( page == 8 ){ page--; story_1.listen_r_7(); }
-      else if ( page == 9 ){ page--; story_1.listen_r_8(); }
-      else if ( page == 10 ){ page--; story_1.listen_r_9(); }
-      else if ( page == 11 ){ page--; story_1.listen_r_10(); }
-      else if ( page == 12 ){ page--; story_1.listen_r_11(); }
-      else if ( page == 13 ){ page--; story_1.listen_r_12(); }
-      else if ( page == 14 ){ page--; story_1.listen_r_13(); }
-      else if ( page == 15 ){ page--; story_1.listen_r_14(); }
-      else if ( page == 16 ){ page--; story_1.listen_r_15(); }
-      else if ( page == 17 ){ page--; story_1.listen_r_16(); }
-      else if ( page == 18 ){ page--; story_1.listen_r_17(); }
-      else if ( page == 19 ){ page--; story_1.listen_r_18(); }
-      else if ( page == 20 ){ page--; story_1.listen_r_19(); }
-      else if ( page == 21 ){ page--; story_1.listen_r_20(); }
-      else if ( page == 22 ){ page--; story_1.listen_r_21(); }
-      else if ( page == 23 ){ page--; story_1.listen_r_22(); }
-      else if ( page == 24 ){ page--; story_1.listen_r_23(); }
-      else if ( page == 25 ){ page--; story_1.listen_r_24(); }
-      else if ( page == 26 ){ page--; story_1.listen_r_25(); }
-      else if ( page == 27 ){ page--; story_1.listen_r_26(); }
+      if ( page == 2 ){ page--; story_1.record_s_1(); }
+      else if ( page == 3 ){ page--; story_1.record_s_2(); }
+      else if ( page == 4 ){ page--; story_1.record_s_3(); }
+      else if ( page == 5 ){ page--; story_1.record_s_4(); }
+      else if ( page == 6 ){ page--; story_1.record_s_5(); }
+      else if ( page == 7 ){ page--; story_1.record_s_6(); }
+      else if ( page == 8 ){ page--; story_1.record_s_7(); }
+      else if ( page == 9 ){ page--; story_1.record_s_8(); }
+      else if ( page == 10 ){ page--; story_1.record_s_9(); }
+      else if ( page == 11 ){ page--; story_1.record_s_10(); }
+      else if ( page == 12 ){ page--; story_1.record_s_11(); }
+      else if ( page == 13 ){ page--; story_1.record_s_12(); }
+      else if ( page == 14 ){ page--; story_1.record_s_13(); }
+      else if ( page == 15 ){ page--; story_1.record_s_14(); }
+      else if ( page == 16 ){ page--; story_1.record_s_15(); }
+      else if ( page == 17 ){ page--; story_1.record_s_16(); }
+      else if ( page == 18 ){ page--; story_1.record_s_17(); }
+      else if ( page == 19 ){ page--; story_1.record_s_18(); }
+      else if ( page == 20 ){ page--; story_1.record_s_19(); }
+      else if ( page == 21 ){ page--; story_1.record_s_20(); }
+      else if ( page == 22 ){ page--; story_1.record_s_21(); }
+      else if ( page == 23 ){ page--; story_1.record_s_22(); }
+      else if ( page == 24 ){ page--; story_1.record_s_23(); }
+      else if ( page == 25 ){ page--; story_1.record_s_24(); }
+      else if ( page == 26 ){ page--; story_1.record_s_25(); }
+      else if ( page == 27 ){ page--; story_1.record_s_26(); }
     }
   });
 

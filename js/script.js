@@ -134,7 +134,7 @@ $(document).ready(function (){
       $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
 
       if( music_on == false ){
-        $("#music").attr("src","./audio/intro_loop.mp3");
+        $("#music").attr("src","./audio/introTrack.mp3");
         music_on = true;
         $("#music")[0].play();
         $("#music")[0].volume = 0.4;
@@ -167,7 +167,7 @@ $(document).ready(function (){
       $("#image_button_1, #image_button_2, #image_button_3").css("display","none");
 
       if( music_on == false ){
-        $("#music").attr("src","./audio/intro_loop.mp3");
+        $("#music").attr("src","./audio/introTrack.mp3");
         music_on = true;
         $("#music")[0].play();
         $("#music")[0].volume = 0.4;
@@ -406,7 +406,7 @@ $(document).ready(function (){
       $("#voice").attr("src"," "); 
 
       if( music_on == false ){
-        $("#music").attr("src","./audio/intro_loop.mp3");
+        $("#music").attr("src","./audio/outroTrack.mp3");
         music_on = true;
         $("#music")[0].play();
         $("#music")[0].volume = 0.4;
@@ -447,6 +447,8 @@ $(document).ready(function (){
 
       $("#answer_box").css("visibility","visible");
       $("#answer_box").css("display","block");
+
+      $("#image_button_1, #image_button_2, #image_button_3").css("position","absolute");
       $("#image_button_1").css("display","block");
 
       $("#image_button_1").css("top","85%");//78
@@ -790,10 +792,17 @@ $(document).ready(function (){
           var out_put = ""; recorded_voice = ""; var correct = true;
 
           //$("#answer_box").innerHTML = out_put;
-          var text_1_1 = text_1.split(".").split(",").split(";").split("'").split("!").join(" ");//.,;''!
+          var text_1_1 = text_1.split(".").join(" ");//.,;''!
+          text_1_1 = text_1.split(",").join(" ");
+          text_1_1 = text_1.split(";").join(" ");
+          text_1_1 = text_1.split("'").join(" ");
+          text_1_1 = text_1.split("!").join(" ");
           text_1_1 = text_1_1.split(" ");
 
-          recorded_voice = text_1_1[0] + " " + tag;
+          recorded_voice = tag;
+          var caps = recorded_voice;
+          caps = caps.charAt(0).toUpperCase() + caps.slice(1);
+          recorded_voice = caps;
           var text_2 = recorded_voice.split(" ");
 
           for (var i = 0; i < text_2.length; i++){
@@ -808,7 +817,6 @@ $(document).ready(function (){
           }
 
           out_put += ".";
-          alert(out_put);
           $("#answer_box").html(out_put); 
           //recorded_voice = "There " + tag + ".";
           //$("#answer_box").text(out_put);

@@ -11,7 +11,7 @@ $(document).ready(function (){
   var time = "";
   var timeout_1; var timeout_2; var timeout_3;
   var detectTap = false; var music_on = false; var recording_on = false;
-  var screen = ""; var recorded_voice = "";
+  var screen = ""; var recorded_voice = ""; var voice_trigger = "";
   var text_1 = ""; var text_2 = "";
   $("#voice")[0].pause();
   $("#voice").attr("src"," ");
@@ -419,6 +419,7 @@ $(document).ready(function (){
 
     function record_s_1(){
       screen = "record_s";
+      page = 1;
 
       $("#image_2").css("visibility","hidden");
       $("#image_2").css("display","none");
@@ -427,10 +428,11 @@ $(document).ready(function (){
 
       $("#image_1").css("width","100%");
       $("#image_1").css("transform","translate(0%, 0%)");
-      $("#image_1").attr("src","./img/background_s_1.jpg");
+      $("#image_1").attr("src","./img/r_2.1.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "There was a boy named Ladka who lived in Aina. He had a calf.";
+      text_1 = "There was a boy named Ladka who lived in Aina.";
+      voice_trigger = "there *tag";
       $("#text_box").text(text_1); 
       $("#text_box").css("visibility","visible");
       $("#text_box").css("display","inline-block");
@@ -445,22 +447,390 @@ $(document).ready(function (){
       $("#image_button_1").css("background-color","#f3f3f37a");*/
       $("#image_button_1").css("background-color","transparent");
       $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
     }
+
+    function record_s_2(){
+      $("#image_1").attr("src","./img/r_2.2.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "He had a calf.";
+      voice_trigger = "he *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_3(){
+      $("#image_1").attr("src","./img/r_2.3.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Every Morning, they went to the meadow at the edge of the forest.";
+      voice_trigger = "every *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_4(){
+      $("#image_1").attr("src","./img/r_2.4.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "The calf would graze all day long; the boy would play.";
+      voice_trigger = "the *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_5(){
+      $("#image_1").attr("src","./img/r_2.5.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "And they would return together in the evening.";
+      voice_trigger = "and *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_6(){
+      $("#image_1").attr("src","./img/r_3.1.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "One morning, the calf was grazing and the boy was roaming as usual.";
+      voice_trigger = "one *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_7(){
+      $("#image_1").attr("src","./img/r_3.2.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "But the calf ate very little grass that day. ";
+      voice_trigger = "but *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_8(){
+      $("#image_1").attr("src","./img/r_3.3.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Then, she sat down on her belly and fell asleep, slowly chewing cud.";
+      voice_trigger = "then *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_9(){
+      $("#image_1").attr("src","./img/r_3.4.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Ladka ate fruits and plums from the trees.";
+      voice_trigger = "ladka *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_10(){
+      $("#image_1").attr("src","./img/r_3.5.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "He played on the branches, plucking twigs and flowers.";
+      voice_trigger = "he *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_11(){
+      $("#image_1").attr("src","./img/r_4.1.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "When evening came and the sun was setting, the calf woke up and was hungry again.";
+      voice_trigger = "when *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_12(){
+      $("#image_1").attr("src","./img/r_4.2.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "She began to graze and walk about.";
+      voice_trigger = "she *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_13(){
+      $("#image_1").attr("src","./img/r_4.3.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Ladka was tired and ready to go home.";
+      voice_trigger = "ladka *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_14(){
+      $("#image_1").attr("src","./img/r_4.4.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "He sat waiting for her, and played with little rocks.";
+      voice_trigger = "he *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_15(){
+      $("#image_1").attr("src","./img/r_4.5.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "After some time, he called out to the calf, 'Let’s go home. It’s getting dark. We will be late.'";
+      voice_trigger = "after *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_16(){
+      $("#image_1").attr("src","./img/r_5.1.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "The calf was still hungry, and kept grazing.";
+      voice_trigger = "the *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_17(){
+      $("#image_1").attr("src","./img/r_5.2.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Ladka shouted again, now both tired and afraid.";
+      voice_trigger = "ladka *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_18(){
+      $("#image_1").attr("src","./img/r_5.3.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "'We should go home now. Come, we will be late. It will soon be night.'";
+      voice_trigger = "we *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_19(){
+      $("#image_1").attr("src","./img/r_5.4.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Calf ignored him and continued grazing.";
+      voice_trigger = "calf *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_20(){
+      $("#image_1").attr("src","./img/r_6.1.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Ladka was confused and began to weep.";
+      voice_trigger = "ladka *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_21(){
+      $("#image_1").attr("src","./img/r_6.2.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "He feared the darkness in the forest. It was going to be night soon.";
+      voice_trigger = "he *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_22(){
+      $("#image_1").attr("src","./img/r_6.3.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "There were honeybees returning home after a hard day’s work.";
+      voice_trigger = "there *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_23(){
+      $("#image_1").attr("src","./img/r_6.4.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "The calf was in their way. They bumped into her, and one of the bees stung her in the ear.";
+      voice_trigger = "the *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_24(){
+      $("#image_1").attr("src","./img/r_7.1.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "The calf began to bleat and moan and jump about in pain.";
+      voice_trigger = "the *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_25(){
+      $("#image_1").attr("src","./img/r_7.2.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Then she started running towards home.";
+      voice_trigger = "then *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_26(){
+      $("#image_1").attr("src","./img/r_7.3.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "Ladka stood up happily and ran after the calf, yelling";
+      voice_trigger = "ladka *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
+    function record_s_27(){
+      $("#image_1").attr("src","./img/r_7.4.png");
+      $("#image_1").fadeIn();  
+
+      text_1 = "'Hey, wait for me! Wait for me! We are going home!'";
+      voice_trigger = "hey *tag";
+      $("#text_box").text(text_1); 
+
+      $("#image_button_1").css("top","74%");//78
+      $("#image_button_1").css("left","68%");
+      $("#image_button_1").css("background-image","url(./img/recording_off.png)");
+      annyang.abort();
+    }
+
     
     story_1.splash = splash;
     story_1.home = home;
     story_1.book_mode = book_mode;
-    story_1.listen_s_1 = listen_s_1;
-    story_1.listen_s_2 = listen_s_2;
-    story_1.listen_s_3 = listen_s_3;
-    story_1.listen_s_4 = listen_s_4;
-    story_1.listen_s_5 = listen_s_5;
-    story_1.listen_s_6 = listen_s_6;
-    story_1.listen_s_7 = listen_s_7;
-    story_1.listen_s_8 = listen_s_8;
-    story_1.listen_s_9 = listen_s_9;
+    story_1.listen_s_1 = listen_s_1; story_1.listen_s_2 = listen_s_2; story_1.listen_s_3 = listen_s_3;
+    story_1.listen_s_4 = listen_s_4; story_1.listen_s_5 = listen_s_5; story_1.listen_s_6 = listen_s_6;
+    story_1.listen_s_7 = listen_s_7; story_1.listen_s_8 = listen_s_8; story_1.listen_s_9 = listen_s_9;
     story_1.listen_s_10 = listen_s_10;
-    story_1.record_s_1 = record_s_1;
+    story_1.record_s_1 = record_s_1; story_1.record_s_2 = record_s_2; story_1.record_s_3 = record_s_3;
+    story_1.record_s_4 = record_s_4; story_1.record_s_5 = record_s_5; story_1.record_s_6 = record_s_6;
+    story_1.record_s_7 = record_s_7; story_1.record_s_8 = record_s_8; story_1.record_s_9 = record_s_9;
+    story_1.record_s_10 = record_s_10; story_1.record_s_11 = record_s_11; story_1.record_s_12 = record_s_12;
+    story_1.record_s_13 = record_s_13; story_1.record_s_14 = record_s_14; story_1.record_s_15 = record_s_15;
+    story_1.record_s_16 = record_s_16; story_1.record_s_17 = record_s_17; story_1.record_s_18 = record_s_18;
+    story_1.record_s_19 = record_s_19; story_1.record_s_20 = record_s_20; story_1.record_s_21 = record_s_21;
+    story_1.record_s_22 = record_s_22; story_1.record_s_23 = record_s_23; story_1.record_s_24 = record_s_24;
+    story_1.record_s_25 = record_s_25; story_1.record_s_26 = record_s_26; story_1.record_s_27 = record_s_27;
   }
 
   function annyang_record(){
@@ -482,13 +852,15 @@ $(document).ready(function (){
     if (annyang){
       var commands = {
         'show me *tag': function(tag) { alert(tag); },
-        'there *tag': function(tag){
-          recorded_voice = ""; var out_put = "";
-          recorded_voice = "There " + tag;
-          
+        //'there *tag': function(tag){
+        voice_trigger : function(tag){
+          var out_put = ""; recorded_voice = ""; var correct = true;
+
           //$("#answer_box").innerHTML = out_put;
-          var text_1_1 = text_1.split(".").join(" ");
+          var text_1_1 = text_1.split(".").split(",").split(";").split("'").split("!").join(" ");//.,;''!
           text_1_1 = text_1_1.split(" ");
+
+          recorded_voice = text_1_1[0] + " " + tag;
           var text_2 = recorded_voice.split(" ");
 
           for (var i = 0; i < text_2.length; i++){
@@ -497,6 +869,7 @@ $(document).ready(function (){
             }
             else{ 
               out_put += "<span style='color:red;font-weight:bold;'>" + text_2[i] + "</span>"; 
+              correct = false;
             }
             if( i != text_2.length-1 ){ out_put += " "; }
           }
@@ -509,6 +882,20 @@ $(document).ready(function (){
           //$("#answer_box").text(recorded_voice); 
           $("#answer_box").css("visibility","visible");
           $("#answer_box").css("display","inline-block");
+
+          /*if( correct == true){
+            $("#image_button_3").css("visibility","hidden");
+            $("#image_button_3").css("display","none");
+          }
+          else{
+            $("#image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+            $("#image_button_3").css("visibility","visible");
+            $("#image_button_3").css("display","inline-block");
+            $("#image_button_3").css("top","-3%");//4
+            $("#image_button_3").css("left","-11%");//-5
+          }*/
+
+          
          }/*,
         'he *tag': function(tag){ 
           recorded_voice = recorded_voice + ".He " + tag;
@@ -521,10 +908,12 @@ $(document).ready(function (){
     }
     else{
         recording_on = false;
-        $("#image_button_1").css("background-image","url(./img/recording_off.png)");
         $("#answer_box").text(" "); 
         $("#answer_box").css("visibility","hidden");
         $("#answer_box").css("display","none");
+        /*$("#image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+        $("#image_button_3").css("visibility","hidden");
+        $("#image_button_3").css("display","none");*/
         annyang.abort();
     }
   }
@@ -606,6 +995,18 @@ $(document).ready(function (){
         $("#voice")[0].pause(); $("#voice").attr("src"," ");
       }
     }
+    /*else if ( screen == "record_s"){
+      $("#voice")[0].pause(); $("#voice").attr("src"," ");
+      $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+      $("#image_button_3").css("background-image","url(./img/sound_icon.gif)");
+
+      if ( page == 6 ){ $("#voice").attr("src","./audio/5c.mp3"); $("#voice")[0].play(); }
+
+      $("#voice")[0].onended = function(){
+        $("#image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+        $("#voice")[0].pause(); $("#voice").attr("src"," ");
+      }
+    }*/
   });
 
 
@@ -635,27 +1036,87 @@ $(document).ready(function (){
   });
 
   $("#next_button").click(function (){
-    if ( screen == "listen_s" && page == 1 ){ page++; story_1.listen_s_2(); }
-    else if ( screen == "listen_s" && page == 2 ){ page++; story_1.listen_s_3(); }
-    else if ( screen == "listen_s" && page == 3 ){ page++; story_1.listen_s_4(); }
-    else if ( screen == "listen_s" && page == 4 ){ page++; story_1.listen_s_5(); }
-    else if ( screen == "listen_s" && page == 5 ){ page++; story_1.listen_s_6(); }
-    else if ( screen == "listen_s" && page == 6 ){ page++; story_1.listen_s_7(); }
-    else if ( screen == "listen_s" && page == 7 ){ page++; story_1.listen_s_8(); }
-    else if ( screen == "listen_s" && page == 8 ){ page++; story_1.listen_s_9(); }
-    else if ( screen == "listen_s" && page == 9 ){ page++; story_1.listen_s_10(); }
+    if ( screen == "listen_s" ){
+      if( page == 1 ){ page++; story_1.listen_s_2(); }
+      else if ( page == 2 ){ page++; story_1.listen_s_3(); }
+      else if ( page == 3 ){ page++; story_1.listen_s_4(); }
+      else if ( page == 4 ){ page++; story_1.listen_s_5(); }
+      else if ( page == 5 ){ page++; story_1.listen_s_6(); }
+      else if ( page == 6 ){ page++; story_1.listen_s_7(); }
+      else if ( page == 7 ){ page++; story_1.listen_s_8(); }
+      else if ( page == 8 ){ page++; story_1.listen_s_9(); }
+      else if ( page == 9 ){ page++; story_1.listen_s_10(); }
+    }
+    else if ( screen == "record_s" ){
+      if( page == 1 ){ page++; story_1.listen_r_2(); }
+      else if ( page == 2 ){ page++; story_1.listen_r_3(); }
+      else if ( page == 3 ){ page++; story_1.listen_r_4(); }
+      else if ( page == 4 ){ page++; story_1.listen_r_5(); }
+      else if ( page == 5 ){ page++; story_1.listen_r_6(); }
+      else if ( page == 6 ){ page++; story_1.listen_r_7(); }
+      else if ( page == 7 ){ page++; story_1.listen_r_8(); }
+      else if ( page == 8 ){ page++; story_1.listen_r_9(); }
+      else if ( page == 9 ){ page++; story_1.listen_r_10(); }
+      else if ( page == 10 ){ page++; story_1.listen_r_11(); }
+      else if ( page == 11 ){ page++; story_1.listen_r_12(); }
+      else if ( page == 12 ){ page++; story_1.listen_r_13(); }
+      else if ( page == 13 ){ page++; story_1.listen_r_14(); }
+      else if ( page == 14 ){ page++; story_1.listen_r_15(); }
+      else if ( page == 15 ){ page++; story_1.listen_r_16(); }
+      else if ( page == 16 ){ page++; story_1.listen_r_17(); }
+      else if ( page == 17 ){ page++; story_1.listen_r_18(); }
+      else if ( page == 18 ){ page++; story_1.listen_r_19(); }
+      else if ( page == 19 ){ page++; story_1.listen_r_20(); }
+      else if ( page == 20 ){ page++; story_1.listen_r_21(); }
+      else if ( page == 21 ){ page++; story_1.listen_r_22(); }
+      else if ( page == 22 ){ page++; story_1.listen_r_23(); }
+      else if ( page == 23 ){ page++; story_1.listen_r_24(); }
+      else if ( page == 24 ){ page++; story_1.listen_r_25(); }
+      else if ( page == 25 ){ page++; story_1.listen_r_26(); }
+      else if ( page == 26 ){ page++; story_1.listen_r_27(); }
+    }
   });
 
   $("#previous_button").click(function (){
-    if ( screen == "listen_s" && page == 2 ){ page--; story_1.listen_s_1(); }
-    else if ( screen == "listen_s" && page == 3 ){ page--; story_1.listen_s_2(); }
-    else if ( screen == "listen_s" && page == 4 ){ page--; story_1.listen_s_3(); }
-    else if ( screen == "listen_s" && page == 5 ){ page--; story_1.listen_s_4(); }
-    else if ( screen == "listen_s" && page == 6 ){ page--; story_1.listen_s_5(); }
-    else if ( screen == "listen_s" && page == 7 ){ page--; story_1.listen_s_6(); }
-    else if ( screen == "listen_s" && page == 8 ){ page--; story_1.listen_s_7(); }
-    else if ( screen == "listen_s" && page == 9 ){ page--; story_1.listen_s_8(); }
-    else if ( screen == "listen_s" && page == 10 ){ page--; story_1.listen_s_9(); }
+    if ( screen == "listen_s" ){
+      if (page == 2 ){ page--; story_1.listen_s_1(); }
+      else if ( page == 3 ){ page--; story_1.listen_s_2(); }
+      else if ( page == 4 ){ page--; story_1.listen_s_3(); }
+      else if ( page == 5 ){ page--; story_1.listen_s_4(); }
+      else if ( page == 6 ){ page--; story_1.listen_s_5(); }
+      else if ( page == 7 ){ page--; story_1.listen_s_6(); }
+      else if ( page == 8 ){ page--; story_1.listen_s_7(); }
+      else if ( page == 9 ){ page--; story_1.listen_s_8(); }
+      else if ( page == 10 ){ page--; story_1.listen_s_9(); }
+    }
+    else if ( screen == "record_s" ){
+      if ( page == 2 ){ page--; story_1.listen_r_1(); }
+      else if ( page == 3 ){ page--; story_1.listen_r_2(); }
+      else if ( page == 4 ){ page--; story_1.listen_r_3(); }
+      else if ( page == 5 ){ page--; story_1.listen_r_4(); }
+      else if ( page == 6 ){ page--; story_1.listen_r_5(); }
+      else if ( page == 7 ){ page--; story_1.listen_r_6(); }
+      else if ( page == 8 ){ page--; story_1.listen_r_7(); }
+      else if ( page == 9 ){ page--; story_1.listen_r_8(); }
+      else if ( page == 10 ){ page--; story_1.listen_r_9(); }
+      else if ( page == 11 ){ page--; story_1.listen_r_10(); }
+      else if ( page == 12 ){ page--; story_1.listen_r_11(); }
+      else if ( page == 13 ){ page--; story_1.listen_r_12(); }
+      else if ( page == 14 ){ page--; story_1.listen_r_13(); }
+      else if ( page == 15 ){ page--; story_1.listen_r_14(); }
+      else if ( page == 16 ){ page--; story_1.listen_r_15(); }
+      else if ( page == 17 ){ page--; story_1.listen_r_16(); }
+      else if ( page == 18 ){ page--; story_1.listen_r_17(); }
+      else if ( page == 19 ){ page--; story_1.listen_r_18(); }
+      else if ( page == 20 ){ page--; story_1.listen_r_19(); }
+      else if ( page == 21 ){ page--; story_1.listen_r_20(); }
+      else if ( page == 22 ){ page--; story_1.listen_r_21(); }
+      else if ( page == 23 ){ page--; story_1.listen_r_22(); }
+      else if ( page == 24 ){ page--; story_1.listen_r_23(); }
+      else if ( page == 25 ){ page--; story_1.listen_r_24(); }
+      else if ( page == 26 ){ page--; story_1.listen_r_25(); }
+      else if ( page == 27 ){ page--; story_1.listen_r_26(); }
+    }
   });
 
 });

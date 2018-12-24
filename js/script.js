@@ -441,6 +441,7 @@ $(document).ready(function (){
       text_1 = "There was a boy named ladka who lived in aina.";
       voice_trigger = "there *tag";
       $("#text_box").text("There was a boy named Ladka who lived in Aina."); 
+      //$("#text_box").html("There was a boy named <button id='new_button' style='color: blue'>Ladka</button> who lived in Aina.");
 
       $("#content_box, #voice_box, #text_box, #answer_box").css("visibility","visible");
       $("#content_box, #voice_box, #text_box, #answer_box").css("display","block");
@@ -918,6 +919,12 @@ $(document).ready(function (){
     music_on = false;
     $("#voice")[0].pause(); $("#voice").attr("src"," ");
     $("#music")[0].pause(); $("#music").attr("src"," ");
+    recording_on = false;
+    $("#answer_box").text(" "); 
+    $("#answer_box").css("visibility","hidden");
+    $("#answer_box").css("display","none");
+    annyang.abort();
+
     story_1.home(); 
   });
 
@@ -966,6 +973,41 @@ $(document).ready(function (){
       }
     }
   });
+
+  /*$("#new_button").click(function (){
+    if ( screen == "record_s" ){
+      recording_on = false;
+      $("#image_button_1").css("background-image","url(./img/recording_button_off.png)");
+      $("#answer_box").text(" "); 
+      $("#answer_box").css("visibility","hidden");
+      $("#answer_box").css("display","none");
+      annyang.abort();
+      $("#voice")[0].pause(); $("#voice").attr("src"," ");
+
+      if( $("#new_button").text() == "Ladka" ){ $("#voice").attr("src","./audio/ladka.mp3"); }
+      else if ( page == 2 ){ $("#voice").attr("src","./audio/2.2.mp3"); }
+      else if ( page == 3 ){ $("#voice").attr("src","./audio/2.3.mp3"); }
+      else if ( page == 4 ){ $("#voice").attr("src","./audio/2.4.mp3"); }
+      else if ( page == 5 ){ $("#voice").attr("src","./audio/2.5.mp3"); }
+      else if ( page == 6 ){ $("#voice").attr("src","./audio/3.1.mp3"); }
+      else if ( page == 7 ){ $("#voice").attr("src","./audio/3.2.mp3"); }
+      else if ( page == 8 ){ $("#voice").attr("src","./audio/3.3.mp3"); }
+      else if ( page == 9 ){ $("#voice").attr("src","./audio/3.4.mp3"); }
+      else if ( page == 10 ){ $("#voice").attr("src","./audio/3.5.mp3"); }
+      else if ( page == 11 ){ $("#voice").attr("src","./audio/4.1.mp3"); }
+      else if ( page == 12 ){ $("#voice").attr("src","./audio/4.2.mp3"); }
+      else if ( page == 13 ){ $("#voice").attr("src","./audio/4.3.mp3"); }
+      else if ( page == 14 ){ $("#voice").attr("src","./audio/4.4.mp3"); }
+      else if ( page == 15 ){ $("#voice").attr("src","./audio/4.5.mp3"); }
+      
+      $("#voice")[0].play();
+      $("#voice")[0].onended = function(){ 
+        $("#voice")[0].pause(); 
+        $("#voice").attr("src"," ");
+      }
+    }
+  });*/
+
 
   $("#next_button").click(function (){
     if ( screen == "listen_s" ){

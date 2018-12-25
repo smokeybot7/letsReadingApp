@@ -438,26 +438,29 @@ $(document).ready(function (){
       $("#image_1").attr("src","./img/r_2.1.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "There was a boy named ladka who lived in aina.";
-      voice_trigger = "there *tag";
-      $("#text_box").text("There was a boy named Ladka who lived in Aina."); 
-      //$("#text_box").html("There was a boy named <button id='new_button' style='color: blue'>Ladka</button> who lived in Aina.");
+      text_1 = "There was a boy named Ladka who lived in Aina.";
+      $("#text_box").html("There was a boy named <button id='new_button'>Ladka</button> who lived in <button id='new_button'>Aina</button>.");
 
       $("#content_box, #voice_box, #text_box, #answer_box").css("visibility","visible");
       $("#content_box, #voice_box, #text_box, #answer_box").css("display","block");
 
       $("#image_button_1, #image_button_2, #image_button_3").css("position","absolute");
-      $("#image_button_1").css("display","block");
+      $("#image_button_1, #image_button_2").css("display","block");
+      $("#image_button_1, #image_button_2").css("background-color","transparent");
+
       $("#image_button_1").css("top","85.5%");//78
       $("#image_button_1").css("left","3%");//8
       $("#image_button_1").css("height","91px");
       $("#image_button_1").css("width","95px");
       $("#image_button_1").css("transform","scale(0.5,0.5)");
-      /*$("#image_button_1").css("border-radius","60px");
-      $("#image_button_1").css("box-shadow","0px 15px 20px rgba(46, 229, 157, 0.4);")
-      $("#image_button_1").css("background-color","#f3f3f37a");*/
-      $("#image_button_1").css("background-color","transparent");
       $("#image_button_1").css("background-image","url(./img/recording_button_off.png)");
+
+      $("#image_button_2").css("top","50.5%");//78
+      $("#image_button_2").css("left","-17%");//8
+      $("#image_button_2").css("height","473px");
+      $("#image_button_2").css("width","494px");
+      $("#image_button_2").css("transform","scale(0.1,0.1)");
+      $("#image_button_2").css("background-image","url(./img/sound_icon_only.png)");
     }
 
     function record_s_2(){
@@ -465,17 +468,15 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "He had a calf.";
-      voice_trigger = "he *tag";
-      $("#text_box").text("He had a calf."); 
+      $("#text_box").html("He had a <button id='new_button'>calf</button>."); 
     }
 
     function record_s_3(){
       $("#image_1").attr("src","./img/r_2.3.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "Every morning, they went to the meadow at the edge of the forest.";
-      voice_trigger = "every *tag";
-      $("#text_box").text("Every Morning, they went to the meadow at the edge of the forest."); 
+      text_1 = "Every Morning, they went to the meadow at the edge of the forest.";
+      $("#text_box").html("Every Morning, they went to the <button id='new_button'>meadow</button> at the <button id='new_button'>edge</button> of the forest."); 
     }
 
     function record_s_4(){
@@ -483,8 +484,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "The calf would graze all day long; the boy would play.";
-      voice_trigger = "the *tag";
-      $("#text_box").text("The calf would graze all day long; the boy would play."); 
+      $("#text_box").html("The calf would <button id='new_button'>graze</button> all day long; the boy would play."); 
     }
 
     function record_s_5(){
@@ -492,8 +492,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "And they would return together in the evening.";
-      voice_trigger = "and *tag";
-      $("#text_box").text("And they would return together in the evening."); 
+      $("#text_box").html("And they would return together in the evening."); 
     }
 
     function record_s_6(){
@@ -501,17 +500,15 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "One morning, the calf was grazing and the boy was roaming as usual.";
-      voice_trigger = "one *tag";
-      $("#text_box").text("One morning, the calf was grazing and the boy was roaming as usual."); 
+      $("#text_box").html("One morning, the calf was <button id='new_button'>grazing</button> and the boy was roaming as usual."); 
     }
 
     function record_s_7(){
       $("#image_1").attr("src","./img/r_3.2.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "But the calf ate very little grass that day.";
-      voice_trigger = "but *tag";
-      $("#text_box").text("But the calf ate very little grass that day."); 
+      text_1 = "But the calf ate very little grass that day. ";
+      $("#text_box").html("But the calf ate very little grass that day."); 
     }
 
     function record_s_8(){
@@ -519,8 +516,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Then, she sat down on her belly and fell asleep, slowly chewing cud.";
-      voice_trigger = "then *tag";
-      $("#text_box").text("Then, she sat down on her belly and fell asleep, slowly chewing cud."); 
+      $("#text_box").html("Then, she sat down on her <button id='new_button'>belly</button> and fell asleep, slowly <button id='new_button'>chewing cud</button>."); 
     }
 
     function record_s_9(){
@@ -528,8 +524,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Ladka ate fruits and plums from the trees.";
-      voice_trigger = "ladka *tag";
-      $("#text_box").text("Ladka ate fruits and plums from the trees."); 
+      $("#text_box").html("Ladka ate fruits and plums from the trees."); 
     }
 
     function record_s_10(){
@@ -537,8 +532,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "He played on the branches, plucking twigs and flowers.";
-      voice_trigger = "he *tag";
-      $("#text_box").text("He played on the branches, plucking twigs and flowers."); 
+      $("#text_box").html("He played on the branches, <button id='new_button'>plucking twigs</button> and flowers."); 
     }
 
     function record_s_11(){
@@ -546,8 +540,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "When evening came and the sun was setting, the calf woke up and was hungry again.";
-      voice_trigger = "when *tag";
-      $("#text_box").text("When evening came and the sun was setting, the calf woke up and was hungry again."); 
+      $("#text_box").html("When evening came and the sun was setting, the calf woke up and was hungry again."); 
     }
 
     function record_s_12(){
@@ -555,8 +548,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "She began to graze and walk about.";
-      voice_trigger = "she *tag";
-      $("#text_box").text("She began to graze and walk about."); 
+      $("#text_box").html("She began to graze and walk about."); 
     }
 
     function record_s_13(){
@@ -564,8 +556,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Ladka was tired and ready to go home.";
-      voice_trigger = "ladka *tag";
-      $("#text_box").text("Ladka was tired and ready to go home."); 
+      $("#text_box").html("Ladka was tired and ready to go home."); 
     }
 
     function record_s_14(){
@@ -573,17 +564,15 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "He sat waiting for her, and played with little rocks.";
-      voice_trigger = "he *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("He sat waiting for her, and played with little rocks."); 
     }
 
     function record_s_15(){
       $("#image_1").attr("src","./img/r_4.5.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "After some time, he called out to the calf, 'let’s go home. it’s getting dark. we will be late.'";
-      voice_trigger = "after *tag";
-      $("#text_box").text("After some time, he called out to the calf, 'Let’s go home. It’s getting dark. We will be late.'"); 
+      text_1 = "After sometime, he called out to the calf, 'Let's go home. It's getting dark. We will be late.'";
+      $("#text_box").html("After sometime, he called out to the calf, 'Let's go home. It's getting dark. We will be late.'"); 
     }
 
     function record_s_16(){
@@ -591,8 +580,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "The calf was still hungry, and kept grazing.";
-      voice_trigger = "the *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("The calf was still hungry, and kept grazing."); 
     }
 
     function record_s_17(){
@@ -600,17 +588,15 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Ladka shouted again, now both tired and afraid.";
-      voice_trigger = "ladka *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("Ladka shouted again, now both tired and afraid."); 
     }
 
     function record_s_18(){
       $("#image_1").attr("src","./img/r_5.3.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "'We should go home now. come, we will be late. it will soon be night.'";
-      voice_trigger = "we *tag";
-      $("#text_box").text("'We should go home now. Come, we will be late. It will soon be night.'"); 
+      text_1 = "'We should go home now. Come, we will be late. It will soon be night.'";
+      $("#text_box").html("'We should go home now. Come, we will be late. It will soon be night.'"); 
     }
 
     function record_s_19(){
@@ -618,8 +604,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Calf ignored him and continued grazing.";
-      voice_trigger = "calf *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("Calf <button id='new_button'>ignored</button> him and continued grazing."); 
     }
 
     function record_s_20(){
@@ -627,17 +612,15 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Ladka was confused and began to weep.";
-      voice_trigger = "ladka *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("Ladka was confused and began to <button id='new_button'>weep</button>."); 
     }
 
     function record_s_21(){
       $("#image_1").attr("src","./img/r_6.2.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "He feared the darkness in the forest. it was going to be night soon.";
-      voice_trigger = "he *tag";
-      $("#text_box").text("He feared the darkness in the forest. It was going to be night soon."); 
+      text_1 = "He feared the darkness in the forest. It was going to be night soon.";
+      $("#text_box").html("He feared the darkness in the forest. It was going to be night soon."); 
     }
 
     function record_s_22(){
@@ -645,17 +628,15 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "There were honeybees returning home after a hard day’s work.";
-      voice_trigger = "there *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("There were honeybees returning home after a hard day’s work."); 
     }
 
     function record_s_23(){
       $("#image_1").attr("src","./img/r_6.4.png");
       $("#image_1").fadeIn();  
 
-      text_1 = "The calf was in their way. they bumped into her, and one of the bees stung her in the ear.";
-      voice_trigger = "the *tag";
-      $("#text_box").text("The calf was in their way. They bumped into her, and one of the bees stung her in the ear."); 
+      text_1 = "The calf was in their way. They bumped into her, and one of the bees stung her in the ear.";
+      $("#text_box").html("The calf was in their way. They <button id='new_button'>bumped</button> into her, and one of the bees <button id='new_button'>stung</button> her in the ear."); 
     }
 
     function record_s_24(){
@@ -663,8 +644,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "The calf began to bleat and moan and jump about in pain.";
-      voice_trigger = "the *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("The calf began to <button id='new_button'>bleat</button> and <button id='new_button'>moan</button> and jump about in pain."); 
     }
 
     function record_s_25(){
@@ -672,8 +652,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Then she started running towards home.";
-      voice_trigger = "then *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("Then she started running towards home."); 
     }
 
     function record_s_26(){
@@ -681,8 +660,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "Ladka stood up happily and ran after the calf, yelling";
-      voice_trigger = "ladka *tag";
-      $("#text_box").text(text_1); 
+      $("#text_box").html("Ladka stood up happily and ran after the calf, yelling"); 
     }
 
     function record_s_27(){
@@ -690,8 +668,7 @@ $(document).ready(function (){
       $("#image_1").fadeIn();  
 
       text_1 = "'Hey, wait for me! wait for me! we are going home!'";
-      voice_trigger = "hey *tag";
-      $("#text_box").text("'Hey, wait for me! Wait for me! We are going home!'"); 
+      $("#text_box").html("'Hey, wait for me! Wait for me! We are going home!'"); 
     }
     
     story_1.splash = splash;
@@ -716,6 +693,7 @@ $(document).ready(function (){
     if( recording_on == false ){
         recording_on = true;
         $("#image_button_1").css("background-image","url(./img/recording_button_on.png)");
+        $("#image_button_2").css("background-image","url(./img/sound_icon_only.png)");
         $("#answer_box").text(" "); 
         $("#voice")[0].pause(); 
         $("#voice").attr("src"," ");
@@ -732,13 +710,10 @@ $(document).ready(function (){
 
     if (annyang){
       var commands = {
-        //'show me *tag': function(tag) { alert(tag); },
-        //'there *tag': function(tag){
         '*tag' : function(tag){
           var out_put = ""; recorded_voice = ""; var correct = true;
 
-          //$("#answer_box").innerHTML = out_put;
-          var text_1_1 = text_1.split(".").join(" ");//.,;''!
+          text_1_1 = text_1.split(".").join(" ");//.,;''!
           text_1_1 = text_1.split(",").join(" ");
           text_1_1 = text_1.split(";").join(" ");
           text_1_1 = text_1.split("'").join(" ");
@@ -752,7 +727,7 @@ $(document).ready(function (){
           var text_2 = recorded_voice.split(" ");
 
           for (var i = 0; i < text_2.length; i++){
-            if( text_2[i] == text_1_1[i] ){ 
+            if( text_2[i].toLowerCase() == text_1_1[i].toLowerCase()){ 
               out_put += text_2[i];
             }
             else{ 
@@ -764,32 +739,9 @@ $(document).ready(function (){
 
           out_put += ".";
           $("#answer_box").html(out_put); 
-          //recorded_voice = "There " + tag + ".";
-          //$("#answer_box").text(out_put);
-          //$("#answer_box").text(recorded_voice); 
           $("#answer_box").css("visibility","visible");
-          $("#answer_box").css("display","block");
-
-          /*if( correct == true){
-            $("#image_button_3").css("visibility","hidden");
-            $("#image_button_3").css("display","none");
-          }
-          else{
-            $("#image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-            $("#image_button_3").css("visibility","visible");
-            $("#image_button_3").css("display","inline-block");
-            $("#image_button_3").css("top","-3%");//4
-            $("#image_button_3").css("left","-11%");//-5
-          }*/
-
-          
-         }/*,
-        'he *tag': function(tag){ 
-          recorded_voice = recorded_voice + ".He " + tag;
-          $("#answer_box").text(recorded_voice); 
-          $("#answer_box").css("visibility","visible");
-          $("#answer_box").css("display","inline-block");
-        }*/
+          $("#answer_box").css("display","block");          
+         }
       };
       annyang.addCommands(commands);
     }
@@ -867,71 +819,11 @@ $(document).ready(function (){
       }
     }
     else if ( screen == "book_mode" ){ story_1.record_s_1(); }
-  });
 
-  $("#image_button_3").click(function (){    
-    if ( screen == "listen_s" ){ 
-      $("#voice")[0].pause(); $("#voice").attr("src"," ");
-      $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-      $("#image_button_3").css("background-image","url(./img/sound_icon.gif)");
-
-      if ( page == 6 ){ $("#voice").attr("src","./audio/5c.mp3"); $("#voice")[0].play(); }
-
-      $("#voice")[0].onended = function(){
-        $("#image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-        $("#voice")[0].pause(); $("#voice").attr("src"," ");
-      }
-    }
-    /*else if ( screen == "record_s"){
-      $("#voice")[0].pause(); $("#voice").attr("src"," ");
-      $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-      $("#image_button_3").css("background-image","url(./img/sound_icon.gif)");
-
-      if ( page == 6 ){ $("#voice").attr("src","./audio/5c.mp3"); $("#voice")[0].play(); }
-
-      $("#voice")[0].onended = function(){
-        $("#image_button_3").css("background-image","url(./img/sound_icon_only.png)");
-        $("#voice")[0].pause(); $("#voice").attr("src"," ");
-      }
-    }*/
-  });
-
-
-  $("#home_button").click(function (){ 
-    $(".navigation_button").css("display","none");
-    $(".navigation_button").css("visibility","hidden");
-
-    $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url()");
-    $("#image_button_1, #image_button_2, #image_button_3").css("background-color","transparent");
-    $("#image_button_1, #image_button_2, #image_button_3").css("transform","scale(1,1)");
-
-    $("#image_button_1").css("visibility","visible");
-    $("#image_button_1").css("display","inline-block");
-    $("#image_button_2, #image_button_3").css("visibility","hidden");
-    $("#image_button_2, #image_button_3").css("display","none");
-
-    $("#image_1").css("width","100%");
-    $("#image_1").css("transform","translate(0%, 0%)");
-
-    $("#content_box, #voice_box, #text_box, #answer_box").css("visibility","hidden");
-    $("#content_box, #voice_box, #text_box, #answer_box").css("display","none");
-
-    music_on = false;
-    $("#voice")[0].pause(); $("#voice").attr("src"," ");
-    $("#music")[0].pause(); $("#music").attr("src"," ");
-    recording_on = false;
-    $("#answer_box").text(" "); 
-    $("#answer_box").css("visibility","hidden");
-    $("#answer_box").css("display","none");
-    annyang.abort();
-
-    story_1.home(); 
-  });
-
-  $("#text_box").click(function (){
-    if ( screen == "record_s" ){
+    else if ( screen == "record_s" ){
       recording_on = false;
       $("#image_button_1").css("background-image","url(./img/recording_button_off.png)");
+      $("#image_button_2").css("background-image","url(./img/sound_icon.gif)");
       $("#answer_box").text(" "); 
       $("#answer_box").css("visibility","hidden");
       $("#answer_box").css("display","none");
@@ -968,37 +860,79 @@ $(document).ready(function (){
       
       $("#voice")[0].play();
       $("#voice")[0].onended = function(){ 
+        $("#image_button_2").css("background-image","url(./img/sound_icon_only.png)");
         $("#voice")[0].pause(); 
         $("#voice").attr("src"," ");
       }
     }
   });
 
-  /*$("#new_button").click(function (){
+  $("#image_button_3").click(function (){    
+    if ( screen == "listen_s" ){ 
+      $("#voice")[0].pause(); $("#voice").attr("src"," ");
+      $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+      $("#image_button_3").css("background-image","url(./img/sound_icon.gif)");
+
+      if ( page == 6 ){ $("#voice").attr("src","./audio/5c.mp3"); $("#voice")[0].play(); }
+
+      $("#voice")[0].onended = function(){
+        $("#image_button_3").css("background-image","url(./img/sound_icon_only.png)");
+        $("#voice")[0].pause(); $("#voice").attr("src"," ");
+      }
+    }
+  });
+
+
+  $("#home_button").click(function (){ 
+    $(".navigation_button").css("display","none");
+    $(".navigation_button").css("visibility","hidden");
+
+    $("#image_button_1, #image_button_2, #image_button_3").css("background-image","url()");
+    $("#image_button_1, #image_button_2, #image_button_3").css("background-color","transparent");
+    $("#image_button_1, #image_button_2, #image_button_3").css("transform","scale(1,1)");
+
+    $("#image_button_1").css("visibility","visible");
+    $("#image_button_1").css("display","inline-block");
+    $("#image_button_2, #image_button_3").css("visibility","hidden");
+    $("#image_button_2, #image_button_3").css("display","none");
+
+    $("#image_1").css("width","100%");
+    $("#image_1").css("transform","translate(0%, 0%)");
+
+    $("#content_box, #voice_box, #text_box, #answer_box").css("visibility","hidden");
+    $("#content_box, #voice_box, #text_box, #answer_box").css("display","none");
+
+    music_on = false;
+    $("#voice")[0].pause(); $("#voice").attr("src"," ");
+    $("#music")[0].pause(); $("#music").attr("src"," ");
+    recording_on = false;
+    $("#answer_box").text(" "); 
+    $("#answer_box").css("visibility","hidden");
+    $("#answer_box").css("display","none");
+    annyang.abort();
+
+    story_1.home(); 
+  });
+
+
+  //$("#new_button").click(function (){alert("x");
+  $(document).on("click", "#new_button", function (){
     if ( screen == "record_s" ){
       recording_on = false;
       $("#image_button_1").css("background-image","url(./img/recording_button_off.png)");
+      $("#image_button_2").css("background-image","url(./img/sound_icon_only.png)");
       $("#answer_box").text(" "); 
       $("#answer_box").css("visibility","hidden");
       $("#answer_box").css("display","none");
       annyang.abort();
       $("#voice")[0].pause(); $("#voice").attr("src"," ");
 
-      if( $("#new_button").text() == "Ladka" ){ $("#voice").attr("src","./audio/ladka.mp3"); }
-      else if ( page == 2 ){ $("#voice").attr("src","./audio/2.2.mp3"); }
-      else if ( page == 3 ){ $("#voice").attr("src","./audio/2.3.mp3"); }
-      else if ( page == 4 ){ $("#voice").attr("src","./audio/2.4.mp3"); }
-      else if ( page == 5 ){ $("#voice").attr("src","./audio/2.5.mp3"); }
-      else if ( page == 6 ){ $("#voice").attr("src","./audio/3.1.mp3"); }
-      else if ( page == 7 ){ $("#voice").attr("src","./audio/3.2.mp3"); }
-      else if ( page == 8 ){ $("#voice").attr("src","./audio/3.3.mp3"); }
-      else if ( page == 9 ){ $("#voice").attr("src","./audio/3.4.mp3"); }
-      else if ( page == 10 ){ $("#voice").attr("src","./audio/3.5.mp3"); }
-      else if ( page == 11 ){ $("#voice").attr("src","./audio/4.1.mp3"); }
-      else if ( page == 12 ){ $("#voice").attr("src","./audio/4.2.mp3"); }
-      else if ( page == 13 ){ $("#voice").attr("src","./audio/4.3.mp3"); }
-      else if ( page == 14 ){ $("#voice").attr("src","./audio/4.4.mp3"); }
-      else if ( page == 15 ){ $("#voice").attr("src","./audio/4.5.mp3"); }
+      if( $(this).text() == "Ladka" ){ $("#voice").attr("src","./audio/ladka.mp3"); }
+      else if( $(this).text() == "Aina" ){ $("#voice").attr("src","./audio/aina.mp3"); }
+      else if( $(this).text() == "calf" ){ $("#voice").attr("src","./audio/calf.mp3"); }
+      else if( $(this).text() == "meadow" ){ $("#voice").attr("src","./audio/meadow.mp3"); }
+      else if( $(this).text() == "edge" ){ $("#voice").attr("src","./audio/edge.mp3"); }
+      else if( $(this).text() == "graze" ){ $("#voice").attr("src","./audio/graze.mp3"); }
       
       $("#voice")[0].play();
       $("#voice")[0].onended = function(){ 
@@ -1006,7 +940,7 @@ $(document).ready(function (){
         $("#voice").attr("src"," ");
       }
     }
-  });*/
+  });
 
 
   $("#next_button").click(function (){

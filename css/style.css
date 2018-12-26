@@ -142,6 +142,19 @@ body{
 	width: 59%;
 }
 
+#new_button{
+	background-color: transparent;
+	border: none;
+	margin: 0%;
+	padding: 0%;
+	font-size: 24px;
+	text-align: center;
+	color: blue;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+}
+
 #text_box{
 	display: none;
 	visibility: hidden;
@@ -149,6 +162,7 @@ body{
 	border: none;
 	margin: 0%;
 	padding: 0%;
+	padding-left: 6%;
 	font-size: 24px;
 	text-align: left;
 	color: #0a0a0ae0;
@@ -158,6 +172,7 @@ body{
 	position: absolute;
 	top: 77%; /*82*/
 	left: 4.5%;/*3*/
+	height: 8.7%;
 	width: 91%;
 	border-radius: 6px;
 	outline: none;
